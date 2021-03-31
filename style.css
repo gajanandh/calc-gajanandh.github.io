@@ -1,0 +1,98 @@
+:root {
+  --body: #f6f6f6;
+  --border: #333;
+  --btn-hover: #ddd;
+  --btn-active: #ccc;
+  --btn-red: #faa;
+  --btn-red-hover: #e99;
+  --btn-red-active: #d88;
+  --btn-blue: #aaf;
+  --btn-blue-hover: #99e;
+  --btn-blue-active: #88d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  background-color: var(--body);
+  color: var(--font);
+  font-family: "Roboto", sans-serif;
+}
+.calculator {
+  background-color: rgb(130, 130, 130);
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+}
+.screen {
+  min-height: 80px;
+  padding: 10px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: right;
+  font-size: 30px;
+  word-wrap: break-word;
+  word-break: break-all;
+  background-color: #ddd;
+}
+.keyGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+.clearRed {
+  background-color: var(--btn-red);
+  padding: 10px;
+  grid-column: span 1;
+  font-size: 25px;
+}
+.DeleteBlue {
+  background-color: var(--btn-blue);
+  padding: 10px;
+  grid-column: span 1;
+  font-size: 20px;
+}
+.plusbtn
+{
+  grid-column: 4/5;
+  grid-row: 4/6
+}
+.zerobtn
+{
+  /* grid-column: span 2; */
+}
+.btn {
+  padding: 10px;
+  font-size: 30px;
+}
+button {
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+  border: 2px solid var(--border);
+}
+.btn:hover {
+  background-color: var(--btn-hover);
+}
+.btn:active {
+  background-color: var(--btn-active);
+}
+.clearRed:hover {
+  background-color: var(--btn-red-hover);
+}
+.clearRed:active {
+  background-color: var(--btn-red-active);
+}
+.DeleteBlue:hover {
+  background-color: var(--btn-blue-hover);
+}
+.DeleteBlue:active {
+  background-color: var(--btn-blue-active);
+}
